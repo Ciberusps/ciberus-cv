@@ -10,9 +10,10 @@
   "dependencies": {
     "mobx": "^4.2.0",
     "mobx-react": "^5.0.0",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
     "react-lottie": "^1.1.0",
+    "react-responsive-carousel": "^3.1.37",
     "styled-components": "^3.2.6"
   },
   "devDependencies": {

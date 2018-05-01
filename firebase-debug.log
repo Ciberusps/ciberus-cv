@@ -1,89 +1,117 @@
-[debug] [2018-04-26T17:56:33.869Z] ----------------------------------------------------------------------
-[debug] [2018-04-26T17:56:33.872Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Ciber\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase deploy
-[debug] [2018-04-26T17:56:33.872Z] CLI Version:   3.18.4
-[debug] [2018-04-26T17:56:33.872Z] Platform:      win32
-[debug] [2018-04-26T17:56:33.872Z] Node Version:  v8.11.1
-[debug] [2018-04-26T17:56:33.872Z] Time:          Thu Apr 26 2018 20:56:33 GMT+0300 (RTZ 2 (зима))
-[debug] [2018-04-26T17:56:33.872Z] ----------------------------------------------------------------------
+[debug] [2018-04-26T18:02:34.702Z] ----------------------------------------------------------------------
+[debug] [2018-04-26T18:02:34.705Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Ciber\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase deploy
+[debug] [2018-04-26T18:02:34.705Z] CLI Version:   3.18.4
+[debug] [2018-04-26T18:02:34.705Z] Platform:      win32
+[debug] [2018-04-26T18:02:34.705Z] Node Version:  v8.11.1
+[debug] [2018-04-26T18:02:34.705Z] Time:          Thu Apr 26 2018 21:02:34 GMT+0300 (RTZ 2 (зима))
+[debug] [2018-04-26T18:02:34.705Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2018-04-26T17:56:33.884Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2018-04-26T17:56:33.885Z] > authorizing via signed-in user
-[debug] [2018-04-26T17:56:33.886Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
-[debug] [2018-04-26T17:56:33.887Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+[debug] [2018-04-26T18:02:34.718Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-04-26T18:02:34.719Z] > authorizing via signed-in user
+[debug] [2018-04-26T18:02:34.720Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-04-26T18:02:34.721Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
  { refresh_token: '1/1cVtAPwmgHyx71FHjsRCH1mSWKHbrZyV4Bj3XK6V_WA',
   client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
   client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
   grant_type: 'refresh_token',
   scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
- Thu Apr 26 2018 20:56:33 GMT+0300 (RTZ 2 (зима))
-[debug] [2018-04-26T17:56:34.089Z] <<< HTTP RESPONSE 200
-[debug] [2018-04-26T17:56:34.099Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/ciberus-site  
+ Thu Apr 26 2018 21:02:34 GMT+0300 (RTZ 2 (зима))
+[debug] [2018-04-26T18:02:34.916Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-26T18:02:34.925Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/ciberus-site  
   
- Thu Apr 26 2018 20:56:34 GMT+0300 (RTZ 2 (зима))
-[debug] [2018-04-26T17:56:34.955Z] <<< HTTP RESPONSE 200
-[debug] [2018-04-26T17:56:34.956Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/ciberus-site/tokens  
+ Thu Apr 26 2018 21:02:34 GMT+0300 (RTZ 2 (зима))
+[debug] [2018-04-26T18:02:35.775Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-26T18:02:35.776Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/ciberus-site/tokens  
   
- Thu Apr 26 2018 20:56:34 GMT+0300 (RTZ 2 (зима))
-[debug] [2018-04-26T17:56:35.730Z] <<< HTTP RESPONSE 200
-[debug] [2018-04-26T17:58:09.028Z] ----------------------------------------------------------------------
-[debug] [2018-04-26T17:58:09.030Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Ciber\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase deploy
-[debug] [2018-04-26T17:58:09.030Z] CLI Version:   3.18.4
-[debug] [2018-04-26T17:58:09.030Z] Platform:      win32
-[debug] [2018-04-26T17:58:09.030Z] Node Version:  v8.11.1
-[debug] [2018-04-26T17:58:09.030Z] Time:          Thu Apr 26 2018 20:58:09 GMT+0300 (RTZ 2 (зима))
-[debug] [2018-04-26T17:58:09.031Z] ----------------------------------------------------------------------
+ Thu Apr 26 2018 21:02:35 GMT+0300 (RTZ 2 (зима))
+[debug] [2018-04-26T18:02:36.535Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-29T16:37:19.773Z] ----------------------------------------------------------------------
+[debug] [2018-04-29T16:37:19.776Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Ciber\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase deploy
+[debug] [2018-04-29T16:37:19.776Z] CLI Version:   3.18.4
+[debug] [2018-04-29T16:37:19.776Z] Platform:      win32
+[debug] [2018-04-29T16:37:19.776Z] Node Version:  v8.11.1
+[debug] [2018-04-29T16:37:19.776Z] Time:          Sun Apr 29 2018 19:37:19 GMT+0300 (RTZ 2 (зима))
+[debug] [2018-04-29T16:37:19.776Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2018-04-26T17:58:09.042Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2018-04-26T17:58:09.043Z] > authorizing via signed-in user
-[debug] [2018-04-26T17:58:09.045Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/ciberus-site  
+[debug] [2018-04-29T16:37:19.795Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-04-29T16:37:19.796Z] > authorizing via signed-in user
+[debug] [2018-04-29T16:37:19.798Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-04-29T16:37:19.798Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/1cVtAPwmgHyx71FHjsRCH1mSWKHbrZyV4Bj3XK6V_WA',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Sun Apr 29 2018 19:37:19 GMT+0300 (RTZ 2 (зима))
+[debug] [2018-04-29T16:37:20.003Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-29T16:37:20.009Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/ciberus-site  
   
- Thu Apr 26 2018 20:58:09 GMT+0300 (RTZ 2 (зима))
-[debug] [2018-04-26T17:58:09.859Z] <<< HTTP RESPONSE 200
-[debug] [2018-04-26T17:58:09.859Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/ciberus-site/tokens  
+ Sun Apr 29 2018 19:37:20 GMT+0300 (RTZ 2 (зима))
+[debug] [2018-04-29T16:37:20.852Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-29T16:37:20.853Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/ciberus-site/tokens  
   
- Thu Apr 26 2018 20:58:09 GMT+0300 (RTZ 2 (зима))
-[debug] [2018-04-26T17:58:10.554Z] <<< HTTP RESPONSE 200
-[debug] [2018-04-26T17:59:25.711Z] ----------------------------------------------------------------------
-[debug] [2018-04-26T17:59:25.713Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Ciber\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase deploy
-[debug] [2018-04-26T17:59:25.713Z] CLI Version:   3.18.4
-[debug] [2018-04-26T17:59:25.713Z] Platform:      win32
-[debug] [2018-04-26T17:59:25.713Z] Node Version:  v8.11.1
-[debug] [2018-04-26T17:59:25.713Z] Time:          Thu Apr 26 2018 20:59:25 GMT+0300 (RTZ 2 (зима))
-[debug] [2018-04-26T17:59:25.714Z] ----------------------------------------------------------------------
+ Sun Apr 29 2018 19:37:20 GMT+0300 (RTZ 2 (зима))
+[debug] [2018-04-29T16:37:21.551Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-29T16:58:53.797Z] ----------------------------------------------------------------------
+[debug] [2018-04-29T16:58:53.800Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Ciber\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase deploy
+[debug] [2018-04-29T16:58:53.800Z] CLI Version:   3.18.4
+[debug] [2018-04-29T16:58:53.800Z] Platform:      win32
+[debug] [2018-04-29T16:58:53.800Z] Node Version:  v8.11.1
+[debug] [2018-04-29T16:58:53.801Z] Time:          Sun Apr 29 2018 19:58:53 GMT+0300 (RTZ 2 (зима))
+[debug] [2018-04-29T16:58:53.801Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2018-04-26T17:59:25.726Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2018-04-26T17:59:25.727Z] > authorizing via signed-in user
-[debug] [2018-04-26T17:59:25.729Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/ciberus-site  
+[debug] [2018-04-29T16:58:53.817Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-04-29T16:58:53.818Z] > authorizing via signed-in user
+[debug] [2018-04-29T16:58:53.820Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/ciberus-site  
   
- Thu Apr 26 2018 20:59:25 GMT+0300 (RTZ 2 (зима))
-[debug] [2018-04-26T17:59:26.594Z] <<< HTTP RESPONSE 200
-[debug] [2018-04-26T17:59:26.595Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/ciberus-site/tokens  
+ Sun Apr 29 2018 19:58:53 GMT+0300 (RTZ 2 (зима))
+[debug] [2018-04-29T16:58:54.740Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-29T16:58:54.740Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/ciberus-site/tokens  
   
- Thu Apr 26 2018 20:59:26 GMT+0300 (RTZ 2 (зима))
-[debug] [2018-04-26T17:59:27.289Z] <<< HTTP RESPONSE 200
-[debug] [2018-04-26T17:59:36.678Z] ----------------------------------------------------------------------
-[debug] [2018-04-26T17:59:36.681Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Ciber\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase init
-[debug] [2018-04-26T17:59:36.681Z] CLI Version:   3.18.4
-[debug] [2018-04-26T17:59:36.681Z] Platform:      win32
-[debug] [2018-04-26T17:59:36.681Z] Node Version:  v8.11.1
-[debug] [2018-04-26T17:59:36.681Z] Time:          Thu Apr 26 2018 20:59:36 GMT+0300 (RTZ 2 (зима))
-[debug] [2018-04-26T17:59:36.681Z] ----------------------------------------------------------------------
+ Sun Apr 29 2018 19:58:54 GMT+0300 (RTZ 2 (зима))
+[debug] [2018-04-29T16:58:55.504Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-29T17:14:08.679Z] ----------------------------------------------------------------------
+[debug] [2018-04-29T17:14:08.681Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Ciber\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase deploy
+[debug] [2018-04-29T17:14:08.681Z] CLI Version:   3.18.4
+[debug] [2018-04-29T17:14:08.681Z] Platform:      win32
+[debug] [2018-04-29T17:14:08.681Z] Node Version:  v8.11.1
+[debug] [2018-04-29T17:14:08.682Z] Time:          Sun Apr 29 2018 20:14:08 GMT+0300 (RTZ 2 (зима))
+[debug] [2018-04-29T17:14:08.682Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2018-04-26T17:59:36.695Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase"]
-[debug] [2018-04-26T17:59:36.696Z] > authorizing via signed-in user
-[info] 
-     ######## #### ########  ######## ########     ###     ######  ########
-     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
-     ######    ##  ########  ######   ########  #########  ######  ######
-     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
-     ##       #### ##     ## ######## ########  ##     ##  ######  ########
-
-You're about to initialize a Firebase project in this directory:
-
-  C:\react-typescript-webpack-babel-demo
-
-Before we get started, keep in mind:
-
-  * You are currently outside your home directory
-  * You are initializing in an existing Firebase project directory
-
+[debug] [2018-04-29T17:14:08.695Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-04-29T17:14:08.696Z] > authorizing via signed-in user
+[debug] [2018-04-29T17:14:08.698Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/ciberus-site  
+  
+ Sun Apr 29 2018 20:14:08 GMT+0300 (RTZ 2 (зима))
+[debug] [2018-04-29T17:14:09.538Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-29T17:14:09.539Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/ciberus-site/tokens  
+  
+ Sun Apr 29 2018 20:14:09 GMT+0300 (RTZ 2 (зима))
+[debug] [2018-04-29T17:14:10.220Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-29T17:24:39.626Z] ----------------------------------------------------------------------
+[debug] [2018-04-29T17:24:39.629Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Ciber\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase deploy
+[debug] [2018-04-29T17:24:39.629Z] CLI Version:   3.18.4
+[debug] [2018-04-29T17:24:39.629Z] Platform:      win32
+[debug] [2018-04-29T17:24:39.629Z] Node Version:  v8.11.1
+[debug] [2018-04-29T17:24:39.629Z] Time:          Sun Apr 29 2018 20:24:39 GMT+0300 (RTZ 2 (зима))
+[debug] [2018-04-29T17:24:39.629Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-04-29T17:24:39.641Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-04-29T17:24:39.642Z] > authorizing via signed-in user
+[debug] [2018-04-29T17:24:39.644Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-04-29T17:24:39.644Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/1cVtAPwmgHyx71FHjsRCH1mSWKHbrZyV4Bj3XK6V_WA',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Sun Apr 29 2018 20:24:39 GMT+0300 (RTZ 2 (зима))
+[debug] [2018-04-29T17:24:51.817Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-29T17:24:51.824Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/ciberus-site  
+  
+ Sun Apr 29 2018 20:24:51 GMT+0300 (RTZ 2 (зима))
+[debug] [2018-04-29T17:24:52.645Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-29T17:24:52.646Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/ciberus-site/tokens  
+  
+ Sun Apr 29 2018 20:24:52 GMT+0300 (RTZ 2 (зима))
+[debug] [2018-04-29T17:24:53.316Z] <<< HTTP RESPONSE 200

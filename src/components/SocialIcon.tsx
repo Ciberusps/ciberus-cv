@@ -12,6 +12,8 @@ import medium from "../images/medium.png";
 import steam from "../images/steam.png";
 import mail from "../images/mail.png";
 import telegram from "../images/telegram.png";
+import skype from "../images/skype.png";
+import linkedin from "../images/linkedin.png";
 
 export interface SocialIconProps {
   type: string;
@@ -53,6 +55,12 @@ export class SocialIcon extends Component<SocialIconProps, {}> {
       case "telegram":
         image = telegram;
         break;
+      case "skype":
+        image = skype;
+        break;
+      case "linkedin":
+        image = linkedin;
+        break;
 
       default:
         break;
@@ -67,13 +75,22 @@ export class SocialIcon extends Component<SocialIconProps, {}> {
 }
 
 export const SocialIconLink = styled.a`
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   margin: 0 10px 6px 0;
-  padding: 2px;
+  /* padding: 2px; */
   background: linear-gradient(-45deg, ${MAIN_COLOR}, ${ADDITIONAL_COLOR});
   border-radius: 20px;
   /* border: 2px solid ; */
+  transition: all 0.2s ease;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    transform: translateY(-10px) scale(1.1);
+    /* transform: scale(1.2); */
+    /* transform: rotate(360deg); */
+  }
 `;
 
 export const SocialIconImage = styled.img`
