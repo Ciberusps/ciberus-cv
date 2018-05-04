@@ -115,3 +115,62 @@
   
  Sun Apr 29 2018 20:24:52 GMT+0300 (RTZ 2 (зима))
 [debug] [2018-04-29T17:24:53.316Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-01T01:06:09.375Z] ----------------------------------------------------------------------
+[debug] [2018-05-01T01:06:09.375Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Ciber\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase deploy
+[debug] [2018-05-01T01:06:09.375Z] CLI Version:   3.18.4
+[debug] [2018-05-01T01:06:09.375Z] Platform:      win32
+[debug] [2018-05-01T01:06:09.375Z] Node Version:  v8.11.1
+[debug] [2018-05-01T01:06:09.375Z] Time:          Tue May 01 2018 04:06:09 GMT+0300 (RTZ 2 (зима))
+[debug] [2018-05-01T01:06:09.375Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-05-01T01:06:09.391Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-05-01T01:06:09.391Z] > authorizing via signed-in user
+[debug] [2018-05-01T01:06:09.391Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-05-01T01:06:09.391Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/1cVtAPwmgHyx71FHjsRCH1mSWKHbrZyV4Bj3XK6V_WA',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Tue May 01 2018 04:06:09 GMT+0300 (RTZ 2 (зима))
+[debug] [2018-05-01T17:12:31.619Z] ----------------------------------------------------------------------
+[debug] [2018-05-01T17:12:31.622Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Ciber\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase deploy
+[debug] [2018-05-01T17:12:31.622Z] CLI Version:   3.18.4
+[debug] [2018-05-01T17:12:31.622Z] Platform:      win32
+[debug] [2018-05-01T17:12:31.622Z] Node Version:  v8.11.1
+[debug] [2018-05-01T17:12:31.622Z] Time:          Tue May 01 2018 20:12:31 GMT+0300 (RTZ 2 (зима))
+[debug] [2018-05-01T17:12:31.622Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-05-01T17:12:31.641Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-05-01T17:12:31.642Z] > authorizing via signed-in user
+[debug] [2018-05-01T17:12:31.644Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-05-01T17:12:31.645Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/1cVtAPwmgHyx71FHjsRCH1mSWKHbrZyV4Bj3XK6V_WA',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Tue May 01 2018 20:12:31 GMT+0300 (RTZ 2 (зима))
+[debug] [2018-05-01T17:12:31.863Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-01T17:12:31.870Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/ciberus-site  
+  
+ Tue May 01 2018 20:12:31 GMT+0300 (RTZ 2 (зима))
+[debug] [2018-05-01T17:12:32.718Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-01T17:12:32.719Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/ciberus-site/tokens  
+  
+ Tue May 01 2018 20:12:32 GMT+0300 (RTZ 2 (зима))
+[debug] [2018-05-01T17:12:33.440Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'ciberus-site'...
+[info] 
+[info] i  deploying hosting
+[info] i  hosting: preparing build directory for upload...
+[debug] [2018-05-01T17:14:19.483Z] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/ciberus-site/uploads/-LBRgd_o1xUkXhbPY-Dy?fileCount=16&message=  
+  
+ Tue May 01 2018 20:14:19 GMT+0300 (RTZ 2 (зима))
+[debug] [2018-05-01T17:15:01.530Z] Error: connect ETIMEDOUT 23.251.151.130:443
+    at Object._errnoException (util.js:1022:11)
+    at _exceptionWithHostPort (util.js:1044:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1198:14)
+[error] 
+[error] Error: Server Error. connect ETIMEDOUT 23.251.151.130:443

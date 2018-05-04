@@ -3,12 +3,11 @@ import styled, { injectGlobal } from "styled-components";
 
 import { MAIN_COLOR, ADDITIONAL_COLOR } from "../consts";
 
-export interface PinProps {
-  // query: string;
-  // rank: number;
+export interface Props {
+  children: Object;
 }
 
-export class Pin extends Component<PinProps, {}> {
+export class Pin extends Component<Props, {}> {
   render() {
     const { children } = this.props;
 
@@ -40,5 +39,3 @@ export const PinStyle = styled.a`
     text-decoration: none;
   }
 `;
-
-export default Pin;

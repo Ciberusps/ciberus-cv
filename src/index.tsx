@@ -1,9 +1,8 @@
-import "./index.css";
+// import "./index.css";
 
 import React, { ComponentType } from "react";
 import ReactDOM from "react-dom";
 import { AppContainer } from "react-hot-loader";
-
 import { App } from "./components/App";
 
 const render = (Component: ComponentType): void => {

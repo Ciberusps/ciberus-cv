@@ -1,7 +1,8 @@
 import React, { Component, HTMLProps } from "react";
-import styled, { injectGlobal } from "styled-components";
+import styled from "styled-components";
 
 import { MAIN_COLOR, ADDITIONAL_COLOR } from "../consts";
+import { FDiv } from "../styles";
 
 export interface Props {
   rank: number;
@@ -34,7 +35,7 @@ export class RankedTech extends Component<Props, {}> {
   }
 }
 
-export const Tech = styled.div``;
+export const Tech = styled(FDiv)``;
 
 export const Pin = styled.a`
   background: ${MAIN_COLOR}
@@ -67,10 +68,8 @@ export const StarIcon = styled.i`
   cursor: help; */
 `;
 
-export const StarRow = styled.div`
+export const StarRow = styled(FDiv)`
   margin-top: 2px;
   margin-left: 8px;
   font-size: 1.3em;
 `;
-
-export default RankedTech;
