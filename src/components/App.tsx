@@ -13,18 +13,40 @@ import { Filter, Language, SocialMedia as ISocialMedia } from "../models";
 import photo from "../images/photo.jpg";
 import Roboto from "../fonts/Roboto-Regular.ttf";
 import Poppins from "../fonts/Poppins-Regular.ttf";
+import PoppinsOptimized from "../fonts/poppins-regular-webfont.ttf";
 import OpenSans from "../fonts/OpenSans/OpenSans-Regular.ttf";
 
 // Projects
-import tsd2Logo from "../images/tsd2-logo.webp";
-import tsd2_0 from "../images/tsd2-0.webp";
-import tsd2_1 from "../images/tsd2-1.webp";
-import tsd2_2 from "../images/tsd2-2.webp";
-import tsd2_3 from "../images/tsd2-3.webp";
-import tsd2_4 from "../images/tsd2-4.webp";
-import tsd2_5 from "../images/tsd2-5.webp";
-import tsd2_6 from "../images/tsd2-6.webp";
-import tsd2_7 from "../images/tsd2-7.webp";
+
+//// TSD 2
+import tsd2Logo from "../images/tsd2-logo.png";
+import tsd2_0 from "../images/tsd2-0.png";
+import tsd2_1 from "../images/tsd2-1.png";
+import tsd2_2 from "../images/tsd2-2.png";
+import tsd2_3 from "../images/tsd2-3.png";
+import tsd2_4 from "../images/tsd2-4.png";
+import tsd2_5 from "../images/tsd2-5.png";
+import tsd2_6 from "../images/tsd2-6.png";
+import tsd2_7 from "../images/tsd2-7.png";
+
+//// TS 2
+import ts2_0 from "../images/ts2/0.png";
+import ts2_1 from "../images/ts2/1.png";
+import ts2_2 from "../images/ts2/2.png";
+import ts2_3 from "../images/ts2/3.png";
+import ts2_4 from "../images/ts2/4.png";
+import ts2_5 from "../images/ts2/5.png";
+import ts2_6 from "../images/ts2/6.png";
+import ts2_7 from "../images/ts2/7.png";
+import ts2_8 from "../images/ts2/8.png";
+import ts2_9 from "../images/ts2/9.png";
+import ts2_10 from "../images/ts2/10.png";
+import ts2_11 from "../images/ts2/11.png";
+import ts2_12 from "../images/ts2/12.png";
+import ts2_13 from "../images/ts2/13.png";
+import ts2_14 from "../images/ts2/14.png";
+import ts2_15 from "../images/ts2/15.png";
+import ts2_16 from "../images/ts2/16.png";
 
 import gameStatLogo from "../images/gamestat-logo.png";
 
@@ -39,11 +61,11 @@ import {
   BORDER_COLOR
 } from "../consts";
 
-export interface AppState {
+export interface State {
   filter: Filter;
   lang: Language;
   programmingLanguages: string[];
-  soft: string[];
+  softAndTools: string[];
   APIsAndSDKs: string[];
   libs: string[];
   otherSkills: string[];
@@ -53,7 +75,7 @@ export interface AppState {
   socialMedia: ISocialMedia[];
 }
 
-export class App extends Component<{}, AppState> {
+export class App extends Component<{}, State> {
   constructor(props) {
     super(props);
 
@@ -76,42 +98,10 @@ export class App extends Component<{}, AppState> {
           link: "https://www.linkedin.com/in/pavel-penkov-8b3788128/"
         }
       ],
-      programmingLanguages: [
-        "C#",
-        "C++",
-        "HTML/CSS",
-        "SQL",
-        "JavaScript/TypeScript",
-        "Java",
-        "PHP"
-      ],
-      soft: [
-        "VS Code",
-        "Resharper",
-        "Visual Studio",
-        "Photoshop",
-        "Premiere Pro",
-        "After Effects",
-        "Xcode",
-        "Git",
-        "Postman",
-        "Unity3D",
-        "Expo",
-        "OBS",
-        "FileZilla",
-        "Bebo"
-      ],
-      APIsAndSDKs: [
-        "AdToApp",
-        "Appodeal",
-        "Leap Motion",
-        "Opendota",
-        "Steam Web API",
-        "Unity Ads",
-        "Telegram API",
-        "Google VR SDK",
-        "Vuforia",
-        "Twitch API"
+      techs: [
+        { name: "React", rank: 3 },
+        { name: "React Native", rank: 3 },
+        { name: "Unity3d", rank: 3 }
       ],
       interests: [
         "DOTA 2",
@@ -128,6 +118,66 @@ export class App extends Component<{}, AppState> {
         "Blockchain",
         "UI/UX"
       ],
+      programmingLanguages: [
+        "C#",
+        "C++",
+        "HTML/XAML/XML",
+        "CSS",
+        "SASS/LESS",
+        "SQL",
+        "JavaScript",
+        "TypeScript",
+        "Java",
+        "PHP",
+        "Pascal/Delphi"
+      ],
+      softAndTools: [
+        "VS Code",
+        "Resharper",
+        "Visual Studio",
+        "Photoshop",
+        "Premiere Pro",
+        "After Effects",
+        "Xcode",
+        "Git",
+        "Postman",
+        "Unity3D",
+        "Expo",
+        "OBS",
+        "Bebo",
+        "Sketch",
+        "Framer",
+        "Zeplin",
+        "Trello",
+        "Bitbucket",
+        "FileZilla",
+        "phpMyAdmin",
+        "Wordpress",
+        "Joomla",
+        "Code::Blocks",
+        "Notepad++",
+        "Sublime Text",
+        "Android Studio",
+        "Intellij Idea",
+        "Texture Packer",
+        "npm"
+      ],
+      APIsAndSDKs: [
+        "AdToApp",
+        "Appodeal",
+        "Leap Motion",
+        "Opendota",
+        "Steam Web API",
+        "Unity Ads",
+        "Telegram API",
+        "Google VR SDK",
+        "Vuforia",
+        "Twitch API",
+        "Facebook SDK",
+        "Google Play Services",
+        "Unofficial Kinopoisk API",
+        "Firebase"
+      ],
       libs: [
         "Lottie",
         "ReactLottie",
@@ -138,21 +188,40 @@ export class App extends Component<{}, AppState> {
         "MobX-React",
         "Enzyme",
         "Jest",
-        "styled-components"
+        "styled-components",
+        "ESLint",
+        "TSLint",
+        "Flow",
+        "Prettier",
+        "Gulp",
+        "jQuery",
+        "Bootstrap",
+        "Manific Popup",
+        "Volley",
+        "UIL",
+        "HtmlAgilityPack",
+        ".Net Core",
+        "MetroFramework - Modern UI",
+        "MiniJSON",
+        "Owl Carousel",
+        "NGUI",
+        "TouchScript",
+        "AVPro Windows Media",
+        "Json.NET",
+        "OpenIAB",
+        "DOTween",
+        "iTween",
+        "Scaleform",
+        "PagedRect"
       ],
-      otherSkills: ["AmoCRM"],
-      techs: [
-        { name: "React", rank: 3 },
-        { name: "React Native", rank: 3 },
-        { name: "Unity3d", rank: 3 }
-      ],
+      otherSkills: ["AmoCRM", "ASO", "AES", "FSM", "PVRTC"],
       experience: [
         {
           name: "School 4",
           location: "Yaroslavl, Russia",
           time: "2004-2013",
-          filter: Filter.EDUCATION,
-          description: "School with deep english learning"
+          filter: Filter.EDUCATION
+          // description: "School with deep english learning"
         },
         {
           name: "Auto mechanical college",
@@ -235,17 +304,34 @@ export class App extends Component<{}, AppState> {
           description: "",
           videoLink: "OFeBb1Kb1W8",
           screenshots: [
-            "https://pp.userapi.com/c639431/v639431655/1c1b/RBEhIKR-7KE.jpg",
-            "https://pp.userapi.com/c639431/v639431655/1c24/7PZky7JLth4.jpg",
-            "https://pp.userapi.com/c639431/v639431655/1c2d/YhbLKd4qj-0.jpg",
-            "https://pp.userapi.com/c639431/v639431655/1c36/_g48o2tKTGo.jpg",
-            "https://pp.userapi.com/c639431/v639431655/1c40/oVe_BCt0vPI.jpg",
-            "https://psv4.userapi.com/c810137/u199887655/docs/77a526a6886a/1.png?extra=rWNjMV3hlRM3OKqUjLuEHFZYEa2NEgrcThYepPbDpixhEbY6ADx5fG2BgfZmjYI5s0Ktga_yhzNk0lk3q6PyXKWaTT4t8g3rfktdRy5G1kSIqhuAFGi_PWFdu7dBBdniSPsxWHJGwxqskjg",
-            "https://psv4.userapi.com/c810137/u199887655/docs/e4cbe199e568/2.png?extra=rq3UE7lfJin-a4NYY1WAK_uZGWq7NhKp6LWe5FIfM0xZpxLlA3Cx1XNGU_M47ZwWw3uTiLM2V-GajZq85cFxy9b6S89v6OZQXb91ae9ipqdlx3i1plzSSQlauxV8f1GP1YANueJHZwjff0U",
-            "https://psv4.userapi.com/c810137/u199887655/docs/2d9bdeb1dbb0/3.png?extra=d87Sf_Xrc5Xk7GLkQ_BE95j7t99msMd8QSVWmy8y2HfsSyQjUOKG-QFZ6tL0Vc_AW4_zwGkZMbyp7cH5ENFRHte5-4SDaW6SVmEf74t74BM5XaJT-CCKLKEkSpHZUi4iljvVfFEWhh6_uF8",
-            "https://psv4.userapi.com/c810137/u199887655/docs/010d7e237194/4.png?extra=nUG9DSQxSU4TdS7VGwVjRHtKD_Ou1G5VRsWcMxlSOq3MTjtiuvFdRRvXzroMB14yJgp7VJJwwECMbDh8bJXlmFj8FPvxcCJYZ4Pmm0U4h7errl8rraPygro49JgGfPf1E46Ad3m-rHgq5X0",
-            "https://psv4.userapi.com/c810137/u199887655/docs/7a7453ca2041/5.png?extra=29up3C0-SPMuSzXlmmAqIiFdS3RNJQo49iNOL3sJ9hKKUDc59r9zjGwVe4HIDmZLPFHaTvzLjIqHUb4aDPpalt9beq02kIIoPdC9z4ZmGyRpRpGiMtmc_52EKWtXtqCnn9UG6pgGhKbzw7c",
-            "https://psv4.userapi.com/c810137/u199887655/docs/e6e5046d6e24/6.png?extra=3gJk1eSDqdtAWRV0W1IXSr6j39PdBTUQpBBi04WnjTzznVQXeYEIHHFdtAxU8ymbt4QhfP_9dRE_F9xBFQud19DNwjwwZf-aBUFNA_b0kWLd1JovSiZxcODzBKnzwxOk6jW36cW3wyqhFx0"
+            ts2_0,
+            ts2_1,
+            ts2_2,
+            ts2_3,
+            // ts2_4,
+            ts2_5,
+            ts2_6,
+            ts2_7,
+            ts2_8,
+            ts2_9,
+            // ts2_10,
+            ts2_11,
+            ts2_12,
+            ts2_13,
+            ts2_14,
+            ts2_15,
+            ts2_16
+            // "https://pp.userapi.com/c639431/v639431655/1c1b/RBEhIKR-7KE.jpg",
+            // "https://pp.userapi.com/c639431/v639431655/1c24/7PZky7JLth4.jpg",
+            // "https://pp.userapi.com/c639431/v639431655/1c2d/YhbLKd4qj-0.jpg",
+            // "https://pp.userapi.com/c639431/v639431655/1c36/_g48o2tKTGo.jpg",
+            // "https://pp.userapi.com/c639431/v639431655/1c40/oVe_BCt0vPI.jpg"
+            // "https://psv4.userapi.com/c810137/u199887655/docs/77a526a6886a/1.png?extra=rWNjMV3hlRM3OKqUjLuEHFZYEa2NEgrcThYepPbDpixhEbY6ADx5fG2BgfZmjYI5s0Ktga_yhzNk0lk3q6PyXKWaTT4t8g3rfktdRy5G1kSIqhuAFGi_PWFdu7dBBdniSPsxWHJGwxqskjg",
+            // "https://psv4.userapi.com/c810137/u199887655/docs/e4cbe199e568/2.png?extra=rq3UE7lfJin-a4NYY1WAK_uZGWq7NhKp6LWe5FIfM0xZpxLlA3Cx1XNGU_M47ZwWw3uTiLM2V-GajZq85cFxy9b6S89v6OZQXb91ae9ipqdlx3i1plzSSQlauxV8f1GP1YANueJHZwjff0U",
+            // "https://psv4.userapi.com/c810137/u199887655/docs/2d9bdeb1dbb0/3.png?extra=d87Sf_Xrc5Xk7GLkQ_BE95j7t99msMd8QSVWmy8y2HfsSyQjUOKG-QFZ6tL0Vc_AW4_zwGkZMbyp7cH5ENFRHte5-4SDaW6SVmEf74t74BM5XaJT-CCKLKEkSpHZUi4iljvVfFEWhh6_uF8",
+            // "https://psv4.userapi.com/c810137/u199887655/docs/010d7e237194/4.png?extra=nUG9DSQxSU4TdS7VGwVjRHtKD_Ou1G5VRsWcMxlSOq3MTjtiuvFdRRvXzroMB14yJgp7VJJwwECMbDh8bJXlmFj8FPvxcCJYZ4Pmm0U4h7errl8rraPygro49JgGfPf1E46Ad3m-rHgq5X0",
+            // "https://psv4.userapi.com/c810137/u199887655/docs/7a7453ca2041/5.png?extra=29up3C0-SPMuSzXlmmAqIiFdS3RNJQo49iNOL3sJ9hKKUDc59r9zjGwVe4HIDmZLPFHaTvzLjIqHUb4aDPpalt9beq02kIIoPdC9z4ZmGyRpRpGiMtmc_52EKWtXtqCnn9UG6pgGhKbzw7c",
+            // "https://psv4.userapi.com/c810137/u199887655/docs/e6e5046d6e24/6.png?extra=3gJk1eSDqdtAWRV0W1IXSr6j39PdBTUQpBBi04WnjTzznVQXeYEIHHFdtAxU8ymbt4QhfP_9dRE_F9xBFQud19DNwjwwZf-aBUFNA_b0kWLd1JovSiZxcODzBKnzwxOk6jW36cW3wyqhFx0"
           ],
           socialMedia: [{ name: "vk", link: "https://vk.com/cibdev" }]
         },
@@ -327,7 +413,7 @@ export class App extends Component<{}, AppState> {
     const {
       filter,
       programmingLanguages,
-      soft,
+      softAndTools,
       APIsAndSDKs,
       interests,
       libs,
@@ -421,14 +507,14 @@ export class App extends Component<{}, AppState> {
                 })}
               </PinRow>
 
-              <SkillHeader>Software:</SkillHeader>
+              <SkillHeader>Soft and Tools:</SkillHeader>
               <PinRow>
-                {soft.map(val => {
+                {softAndTools.map(val => {
                   return <Pin key={val}>{val}</Pin>;
                 })}
               </PinRow>
 
-              <SkillHeader>SDK / API:</SkillHeader>
+              <SkillHeader>SDKs/APIs:</SkillHeader>
               <PinRow>
                 {APIsAndSDKs.map(val => {
                   return <Pin key={val}>{val}</Pin>;
@@ -504,7 +590,7 @@ export class App extends Component<{}, AppState> {
 injectGlobal`
   @font-face {
     font-family: Poppins;
-    src: url('${Poppins}') format("ttf");
+    src: url('${PoppinsOptimized}') format("ttf");
     font-weight: normal;
     font-style: normal;
     font-stretch: normal; 
@@ -520,6 +606,7 @@ injectGlobal`
 
   html {
     font-size: 100%;
+    line-height: 1.25em;
     font-family: Poppins, sans-serif;
     font-weight: normal;
     font-style: normal;
@@ -742,7 +829,7 @@ export const MenuButton = styled.button`
 export const SkillHeader = styled(FDiv)``;
 
 export const PinRow = styled(FDiv)`
-  margin-bottom: 0.5em;
+  margin-bottom: 1.5em;
 `;
 
 export const CarouselItem = styled(FDiv)`

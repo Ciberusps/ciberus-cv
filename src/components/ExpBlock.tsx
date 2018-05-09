@@ -165,7 +165,7 @@ export class ExpBlock extends Component<Props, State> {
 
           {videoLink ? (
             <iframe
-              width={"auto"}
+              width={"100%"}
               height={"340px"}
               src={`http://www.youtube.com/embed/${videoLink}?enablejsapi=1`}
               frameBorder="0"
@@ -256,6 +256,7 @@ export const Name = styled(FDiv)`
     );
   border-radius: 1em;
   padding: 0em 0.7em;
+  line-height: 1.5em;
   font-size: 1em;
   vertical-align: middle;
 `;
@@ -264,6 +265,7 @@ export const Header = styled(FDiv)`
   display: flex;
   flex-direction: row;
   flex: 1;
+  margin: 0.25em 0;
 `;
 
 export const LocationContainer = styled(FDiv)`
