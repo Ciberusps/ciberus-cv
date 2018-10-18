@@ -6,12 +6,15 @@ import { Filter, SocialMedia as ISocialMedia } from "../models";
 import { FDiv } from "../styles";
 
 import { SocialMedia } from "./SocialMedia";
+import { PinRow } from "./App";
+import { Pin } from "./Pin";
 
 import {
   MAIN_COLOR,
   ADDITIONAL_COLOR,
   BACKGROUND_COLOR,
-  BORDER_COLOR
+  BORDER_COLOR,
+  breakpoint
 } from "../consts";
 
 export interface Props {
@@ -20,6 +23,7 @@ export interface Props {
   location?: string;
   role?: string;
   description?: string;
+  techs?: string[];
   last?: boolean;
   filter: Filter;
   videoLink?: string;
@@ -125,7 +129,8 @@ export class ExpBlock extends Component<Props, State> {
       screenshots,
       socialMedia,
       logo,
-      link
+      link,
+      techs
     } = this.props;
 
     const { isLightBoxOpened, currentImage } = this.state;
@@ -159,22 +164,30 @@ export class ExpBlock extends Component<Props, State> {
             <Time>{time}</Time>
           </Header>
 
-          <Role>{role}</Role>
-
           {logo ? <Logo href={link} target={"_blank"} src={logo} /> : null}
+          <Role>{role}</Role>
 
           {videoLink ? (
             <iframe
               width={"100%"}
               height={"340px"}
-              src={`http://www.youtube.com/embed/${videoLink}?enablejsapi=1`}
+              src={`https://www.youtube.com/embed/${videoLink}?enablejsapi=1`}
               frameBorder="0"
             />
           ) : null}
 
           {this.renderScreenshots()}
-
           <Description dangerouslySetInnerHTML={{ __html: description }} />
+
+          {/* <Description>{description}</Description> */}
+
+          {techs ? (
+            <Techs>
+              {techs.map(val => {
+                return <Pin key={val}>{val}</Pin>;
+              })}
+            </Techs>
+          ) : null}
 
           <SocialMediaRow>{socialMediaNode}</SocialMediaRow>
         </ExpBlockContainer>
@@ -191,6 +204,10 @@ export const ExpBlockWrapper = styled(FDiv)`
 export const DotLineContainer = styled(FDiv)`
   margin-right: 1em;
   flex-direction: column;
+
+  @media (max-width: ${breakpoint.sm}) {
+    display: none;
+  }
 `;
 
 export interface FilterProps {
@@ -239,11 +256,21 @@ export const Line = styled(FDiv)`
 
 export const ExpBlockContainer = styled(FDiv)`
   flex: 9;
+  flex-direction: column;
+  /* flex-basis: 632px; */
   background: #2c2541;
   padding: 1em;
   box-shadow: 0.2em 0.2em 1em #0002;
-  flex-direction: column;
   margin-bottom: 1em;
+  /* min-width: 586px; */
+
+  @media (min-width: ${breakpoint.sm}) {
+    min-width: 420px;
+  }
+
+  @media (min-width: ${breakpoint.xs}) {
+    min-width: 220px;
+  }
 `;
 
 export const Name = styled(FDiv)`
@@ -265,6 +292,7 @@ export const Header = styled(FDiv)`
   display: flex;
   flex-direction: row;
   flex: 1;
+  flex-wrap: wrap;
   margin: 0.25em 0;
 `;
 
@@ -283,10 +311,12 @@ export const Location = styled(FDiv)`
 `;
 export const Time = styled(FDiv)``;
 
-export const Description = styled(FDiv)`
+export const Description = styled.p`
   margin: 0.4em 0.2em;
   letter-spacing: 1;
   font-size: 0.9em;
+  font-family: inherit;
+  white-space: pre-wrap;
 `;
 
 export const Role = styled(FDiv)`
@@ -297,6 +327,7 @@ export const Role = styled(FDiv)`
 
 export const ScreenshotsWrapper = styled(FDiv)`
   margin: 0.5em 0em;
+  /* justify-content: center; */
 
   /* @media (max-width: 480px) {
     justify-content: center;
@@ -313,6 +344,7 @@ export const ScreenshotContainer = styled(FDiv)`
   margin: 0.35em 0.5em 0 0;
   border: 1px solid ${MAIN_COLOR};
   cursor: pointer;
+  transition: all 0.1s ease;
 
   &:hover {
     transform: translateY(-0.75em) scale(1.02);
@@ -323,7 +355,8 @@ export const ScreenshotContainer = styled(FDiv)`
 export const Screenshot = styled.img``;
 
 export const SocialMediaRow = styled(FDiv)`
-  margin: 0.25em 0;
+  /* margin: 0.25em 0; */
+  margin-top: 0.5rem;
 `;
 
 export interface ILogo {
@@ -338,4 +371,8 @@ export const Logo = styled.a`
   background-size: contain, contain;
   justify-self: center;
   align-self: center;
+`;
+
+export const Techs = styled(FDiv)`
+  margin-top: 0.5rem;
 `;

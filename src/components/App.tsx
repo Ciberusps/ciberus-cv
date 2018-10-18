@@ -28,6 +28,10 @@ import tsd2_4 from "../images/tsd2-4.png";
 import tsd2_5 from "../images/tsd2-5.png";
 import tsd2_6 from "../images/tsd2-6.png";
 import tsd2_7 from "../images/tsd2-7.png";
+import d2wp_0 from "../images/DOTA 2 Wiki Parser/d2wp_0.png";
+import d2wp_1 from "../images/DOTA 2 Wiki Parser/d2wp_1.jpg";
+import d2wp_2 from "../images/DOTA 2 Wiki Parser/d2wp_2.jpg";
+import d2wp_3 from "../images/DOTA 2 Wiki Parser/d2wp_3.jpg";
 
 //// TS 2
 import ts2_0 from "../images/ts2/0.png";
@@ -58,7 +62,8 @@ import {
   BACKGROUND_COLOR,
   ADDITIONAL_COLOR,
   TEXT_COLOR,
-  BORDER_COLOR
+  BORDER_COLOR,
+  breakpoint
 } from "../consts";
 
 export interface State {
@@ -70,6 +75,9 @@ export interface State {
   libs: string[];
   otherSkills: string[];
   interests: string[];
+  frontendStack: string[];
+  backendStack: string[];
+  gamedevStack: string[];
   techs: IRankedTech[];
   experience: IExperience[];
   socialMedia: ISocialMedia[];
@@ -84,7 +92,7 @@ export class App extends Component<{}, State> {
       lang: Language.en,
       socialMedia: [
         { name: "vk", link: "https://vk.com/ciberus" },
-        { name: "twitter", link: "https://twitter.com/ciberusps" },
+        { name: "twitter", link: "https://twitter.com/gamestatext" },
         { name: "twitch", link: "https://twitch.tv/ciberusps" },
         { name: "github", link: "https://github.com/ciberusps" },
         { name: "telegram", link: "https://t.me/Ciberus" },
@@ -101,22 +109,25 @@ export class App extends Component<{}, State> {
       techs: [
         { name: "React", rank: 3 },
         { name: "React Native", rank: 3 },
+        { name: "Angular", rank: 2 },
         { name: "Unity3d", rank: 3 }
       ],
       interests: [
         "DOTA 2",
-        "Crypto",
-        "AI",
         "ESports",
         "ESports market",
+        "Crypto",
         "Twitch extensions",
         "Science",
+        "AI",
+        "ML",
         "Ad Integration",
         "AR/VR/MR",
         "Programming",
         "Streaming",
         "Blockchain",
-        "UI/UX"
+        "UI/UX",
+        "PWA"
       ],
       programmingLanguages: [
         "C#",
@@ -131,6 +142,21 @@ export class App extends Component<{}, State> {
         "PHP",
         "Pascal/Delphi"
       ],
+      frontendStack: [
+        "React/React Native",
+        "Angular",
+        "MobX",
+        "RxJS",
+        "JavaScript",
+        "TypeScript",
+        "TSLint",
+        "Webpack",
+        "Jest",
+        "Enzyme",
+        "npm/yarn"
+      ],
+      backendStack: ["Firebase"],
+      gamedevStack: ["Unity3d", "C#"],
       softAndTools: [
         "VS Code",
         "Resharper",
@@ -176,7 +202,8 @@ export class App extends Component<{}, State> {
         "Facebook SDK",
         "Google Play Services",
         "Unofficial Kinopoisk API",
-        "Firebase"
+        "Firebase",
+        "Instagram API"
       ],
       libs: [
         "Lottie",
@@ -196,7 +223,7 @@ export class App extends Component<{}, State> {
         "Gulp",
         "jQuery",
         "Bootstrap",
-        "Manific Popup",
+        "Magnific Popup",
         "Volley",
         "UIL",
         "HtmlAgilityPack",
@@ -215,13 +242,15 @@ export class App extends Component<{}, State> {
         "PagedRect"
       ],
       otherSkills: ["AmoCRM", "ASO", "AES", "FSM", "PVRTC"],
+
       experience: [
         {
           name: "School 4",
           location: "Yaroslavl, Russia",
           time: "2004-2013",
-          filter: Filter.EDUCATION
+          filter: Filter.EDUCATION,
           // description: "School with deep english learning"
+          techs: ["C++", "HTML", "CSS", "Pascal"]
         },
         {
           name: "Auto mechanical college",
@@ -229,7 +258,9 @@ export class App extends Component<{}, State> {
           time: "2013-2017",
           role: "Student",
           filter: Filter.EDUCATION,
-          description: "Programming in computer systems(Computer science)"
+          description:
+            "Programming in computer systems(same as Computer Science associate degree)",
+          techs: ["Pascal/Delphi", "SQL", "C++"]
         },
         {
           filter: Filter.EXPERIENCE,
@@ -237,19 +268,42 @@ export class App extends Component<{}, State> {
           location: "Yaroslavl, Russia",
           time: "08.2015-11.2015",
           role: "Intern",
-          description: "-Development of game prototypes <br />-AR apps"
+          description: `Development of games/apps prototypes 
+
+Projects:
+1) "Photo with fish" app prototype - AR app with 2 markers between which is placed the curving fish. 
+Challenges:
+  - Realtime chroma key to place user fingers on the front layer'
+  - Model curving/autoscaling
+
+2) "TomCat" copycat app prototype - app hears for any noise if user says anything app start recording and after phrase repeat with changed pitch. Learned how digital audio works, sampling rate, discretization and so on.
+
+3) "Spaceship" game prototype - game goal finish race with best score. Optionally player can control ship with Leap Motion
+`,
+          techs: [
+            "Unity",
+            "C#",
+            "AR",
+            "Vuforia",
+            "NGUI",
+            "DOTween",
+            "TouchScript",
+            "Leap Motion",
+            "Instagram API",
+            "Google VR SDK"
+          ]
         },
         {
           filter: Filter.PROJECTS,
           name: "Treasure Simulator DOTA 2",
           location: "Yaroslavl, Russia",
           time: "07.2015-01.2016",
-          role: "Unity3D app(Android) - Owner",
+          role: "App(Android) - Owner",
           logo: tsd2Logo,
           link:
             "https://play.google.com/store/apps/details?id=com.CiberusINC.TreasureSimulator2",
-          description:
-            "App simulate opening treasures from Dota 2. Drop rate of items similar with the actual. In our app u can buy treasures, get sets or items in your inventory from treasure. To make money sell items and sets from your inventory. App contains over 125 treasures with 600+ items and 270+ sets. Also you can try your luck in Roulette and get prizes.",
+          description: `App simulate opening treasures from DOTA 2.
+Items are parsed from DOTA 2 Wiki with my "DOTA 2 Wiki Parser"`,
           screenshots: [
             tsd2_0,
             tsd2_1,
@@ -257,8 +311,12 @@ export class App extends Component<{}, State> {
             tsd2_3,
             tsd2_4,
             tsd2_5,
-            tsd2_6,
-            tsd2_7
+            // tsd2_6,
+            tsd2_7,
+            // d2wp_1,
+            // d2wp_2,
+            // d2wp_3,
+            d2wp_0
           ],
           socialMedia: [
             {
@@ -267,6 +325,24 @@ export class App extends Component<{}, State> {
                 "https://play.google.com/store/apps/details?id=com.CiberusINC.TreasureSimulator2"
             },
             { name: "vk", link: "https://vk.com/cibdev" }
+          ],
+          techs: [
+            "Unity3d",
+            "C#",
+            "Texture Packer",
+            "PVRTC",
+            "NGUI",
+            "UnityAds",
+            "Photoshop",
+            "base64",
+            "AES",
+            "Visual Studio",
+            "Resharper",
+            "git(Bitbucket)",
+            "MiniJSON",
+            "WPF",
+            "HtmlAgilityPack",
+            "MetroUI"
           ]
         },
         {
@@ -275,7 +351,17 @@ export class App extends Component<{}, State> {
           time: "03.2016-05.2016",
           role: "Developer/Site administrator",
           filter: Filter.EXPERIENCE,
-          description: "-PSD to HTML <br /> -Site administration"
+          description: `-PSD to HTML
+-Site administration`,
+          techs: [
+            "HTML",
+            "CSS",
+            "Gulp",
+            "FileZilla",
+            "phpMyAdmin",
+            "Wordpress",
+            "Joomla"
+          ]
         },
         {
           filter: Filter.HACKATHONS,
@@ -283,17 +369,26 @@ export class App extends Component<{}, State> {
           name: "GetHub",
           time: "11.06.2016-12.06.2016",
           role: "YarParking project",
-          link: "http://gethub.ru/",
+          link: "https://gethub.ru/",
           description: "Yaroslavl hackathon"
         },
         {
+          filter: Filter.EXPERIENCE,
           name: "Casual INC",
           location: "Los Angeles, CA",
           time: "05.2016-07.2017",
           role: "Remote Developer",
-          filter: Filter.EXPERIENCE,
-          description:
-            "-Reskin Unity3D apps <br />-Ad SDK's Integration <br />-Publishing apps(released ~80 apps) <br /> <br />Casual INC - daughter company of AdToApp(one of Ad mediation platform that lets you serve ads from multiple source aimed to bring the most revenue for publishers)"
+          description: `-Reskin Unity3D apps
+-Ad SDK's Integration
+-Publishing apps(released ~80 apps)`,
+          techs: [
+            "Unity3d",
+            "C#",
+            "Facebook SDK",
+            "AdToApp",
+            "Texture Packer",
+            "ASO"
+          ]
         },
         {
           filter: Filter.PROJECTS,
@@ -301,7 +396,8 @@ export class App extends Component<{}, State> {
           time: "24.01.2017-present",
           role: "Prototype - Owner",
           link: "https://vk.com/cibdev",
-          description: "",
+          description: `Second version of my "Treasure Simulator DOTA 2" app.
+Refactored and updated "DOTA 2 Wiki Parser" to v2.`,
           videoLink: "OFeBb1Kb1W8",
           screenshots: [
             ts2_0,
@@ -321,27 +417,38 @@ export class App extends Component<{}, State> {
             ts2_14,
             ts2_15,
             ts2_16
-            // "https://pp.userapi.com/c639431/v639431655/1c1b/RBEhIKR-7KE.jpg",
-            // "https://pp.userapi.com/c639431/v639431655/1c24/7PZky7JLth4.jpg",
-            // "https://pp.userapi.com/c639431/v639431655/1c2d/YhbLKd4qj-0.jpg",
-            // "https://pp.userapi.com/c639431/v639431655/1c36/_g48o2tKTGo.jpg",
-            // "https://pp.userapi.com/c639431/v639431655/1c40/oVe_BCt0vPI.jpg"
-            // "https://psv4.userapi.com/c810137/u199887655/docs/77a526a6886a/1.png?extra=rWNjMV3hlRM3OKqUjLuEHFZYEa2NEgrcThYepPbDpixhEbY6ADx5fG2BgfZmjYI5s0Ktga_yhzNk0lk3q6PyXKWaTT4t8g3rfktdRy5G1kSIqhuAFGi_PWFdu7dBBdniSPsxWHJGwxqskjg",
-            // "https://psv4.userapi.com/c810137/u199887655/docs/e4cbe199e568/2.png?extra=rq3UE7lfJin-a4NYY1WAK_uZGWq7NhKp6LWe5FIfM0xZpxLlA3Cx1XNGU_M47ZwWw3uTiLM2V-GajZq85cFxy9b6S89v6OZQXb91ae9ipqdlx3i1plzSSQlauxV8f1GP1YANueJHZwjff0U",
-            // "https://psv4.userapi.com/c810137/u199887655/docs/2d9bdeb1dbb0/3.png?extra=d87Sf_Xrc5Xk7GLkQ_BE95j7t99msMd8QSVWmy8y2HfsSyQjUOKG-QFZ6tL0Vc_AW4_zwGkZMbyp7cH5ENFRHte5-4SDaW6SVmEf74t74BM5XaJT-CCKLKEkSpHZUi4iljvVfFEWhh6_uF8",
-            // "https://psv4.userapi.com/c810137/u199887655/docs/010d7e237194/4.png?extra=nUG9DSQxSU4TdS7VGwVjRHtKD_Ou1G5VRsWcMxlSOq3MTjtiuvFdRRvXzroMB14yJgp7VJJwwECMbDh8bJXlmFj8FPvxcCJYZ4Pmm0U4h7errl8rraPygro49JgGfPf1E46Ad3m-rHgq5X0",
-            // "https://psv4.userapi.com/c810137/u199887655/docs/7a7453ca2041/5.png?extra=29up3C0-SPMuSzXlmmAqIiFdS3RNJQo49iNOL3sJ9hKKUDc59r9zjGwVe4HIDmZLPFHaTvzLjIqHUb4aDPpalt9beq02kIIoPdC9z4ZmGyRpRpGiMtmc_52EKWtXtqCnn9UG6pgGhKbzw7c",
-            // "https://psv4.userapi.com/c810137/u199887655/docs/e6e5046d6e24/6.png?extra=3gJk1eSDqdtAWRV0W1IXSr6j39PdBTUQpBBi04WnjTzznVQXeYEIHHFdtAxU8ymbt4QhfP_9dRE_F9xBFQud19DNwjwwZf-aBUFNA_b0kWLd1JovSiZxcODzBKnzwxOk6jW36cW3wyqhFx0"
           ],
-          socialMedia: [{ name: "vk", link: "https://vk.com/cibdev" }]
+          socialMedia: [{ name: "vk", link: "https://vk.com/cibdev" }],
+          techs: [
+            "Unity3d",
+            "C#",
+            "Texture Packer",
+            "PVRTC",
+            "NGUI",
+            "Photoshop",
+            "base64",
+            "AES",
+            "Visual Studio",
+            "Resharper",
+            "git(Bitbucket)"
+          ]
         },
         {
           name: "SkinSwap",
           location: "Moscow, Russia",
           time: "07.2017-04.2018",
-          role: "Remote Developer/Manager",
+          role: "Remote Developer",
           filter: Filter.EXPERIENCE,
-          description: "Prototype developer"
+          description: `-Develop prototype`,
+          techs: [
+            "React Native",
+            "Unity3d",
+            "Zeplin",
+            "Framer",
+            "Sketch",
+            "Expo",
+            "Postman"
+          ]
         },
         {
           filter: Filter.PROJECTS,
@@ -350,8 +457,8 @@ export class App extends Component<{}, State> {
           role: "Twitch extension - Owner",
           link: "https://gamestatext.com/",
           logo: gameStatLogo,
-          description:
-            'Twitch extension provide in-game statistics for the streamers currently support DOTA 2 <br/> <br/> Also integrated data from awesome personal esports training lab - <a href="https://GOSU.AI" target="_blank">GOSU.AI</a>&nbspu can read about it&nbsp<a href="https://vk.com/@gamestatext-gamestat-gosuai" target="_blank">here</a>',
+          description: `Twitch extension provide in-game statistics for the streamers currently support DOTA 2
+Also integrated data from awesome personal esports training lab - <a href="https://gosu.ai">GOSU.AI</a> u can read about it <a href="https://vk.com/@gamestatext-gamestat-gosuai">here</a>`,
           screenshots: [
             "https://media-elerium.cursecdn.com/attachments/218/514/screenshot1.png",
             "https://media-elerium.cursecdn.com/attachments/218/515/screenshot2.png"
@@ -362,6 +469,19 @@ export class App extends Component<{}, State> {
             { name: "medium", link: "https://medium.com/gamestat" },
             { name: "website", link: "https://gamestatext.com" },
             { name: "mail", link: "mailto:gamestat.ciberus@gmail.com" }
+          ],
+          techs: [
+            "React",
+            "Postman",
+            "Babel",
+            "Webpack",
+            "MobX",
+            "Flow",
+            "Prettier",
+            "Firebase",
+            "Opendota",
+            "Twitch API",
+            "Twitch Extensions"
           ]
         },
         {
@@ -369,10 +489,13 @@ export class App extends Component<{}, State> {
           name: "BubbleText",
           time: "04.2018-present",
           role: "Twitch extension(Front-End developer) - Co-founder",
-          link: "http://bubbletext.io/",
+          link: "https://bubbletext.io/",
           logo: bubbleTextLogo,
-          description:
-            'First of several exts using "Bits in Extensions". Selected by&nbsp<a href="https://twitch.tv/" target="_blank">Twitch.tv</a> for feature placement. <br/><br/> Bubble Text allows streamers to install an interactive speech bubble on their stream. Viewers can then use bits to get a set of text, animation and bubble style that will be displayed on the stream. By providing a variety of options, bubble text assures a unique and personalized experience for every user. This extension makes viewers feel more engaged by providing a gateway from Twitch to streamer’s screen. For streamers, this extension gives an opportunity to monetize their stream by giving them a portion of each sale. <br /><br /> Made in collaboration with @drazzzer(Kubatko Daniil)',
+          description: `First of several exts using "Bits in Extensions". Selected by&nbsp<a href="https://twitch.tv/" target="_blank">Twitch.tv</a> for feature placement.
+
+Bubble Text allows streamers to install an interactive speech bubble on their stream. Viewers can then use bits to get a set of text, animation and bubble style that will be displayed on the stream. By providing a variety of options, bubble text assures a unique and personalized experience for every user. This extension makes viewers feel more engaged by providing a gateway from Twitch to streamer’s screen. For streamers, this extension gives an opportunity to monetize their stream by giving them a portion of each sale.
+
+Made in collaboration with @drazzzer(Kubatko Daniil)`,
           screenshots: [
             bubbleTextGif,
             "https://5pogkiewjnqz3f2lydhxwqqxncbpx8.ext-twitch.tv/5pogkiewjnqz3f2lydhxwqqxncbpx8/0.0.2/904c3932dedfb505502c59b883c44444/internal/screenshots/227/879/config.png",
@@ -388,13 +511,22 @@ export class App extends Component<{}, State> {
               link: "https://www.facebook.com/groups/bubbletext/"
             },
             { name: "twitch", link: "https://www.twitch.tv/bubbletext" },
-            { name: "website", link: "http://bubbletext.io/" },
+            { name: "website", link: "https://bubbletext.io/" },
             { name: "mail", link: "mailto:bubbletext.ext@gmail.com" }
+          ],
+          techs: [
+            "React",
+            "TypeScript",
+            "MobX",
+            "styled-components",
+            "Webpack",
+            "socket.io",
+            "Twitch API",
+            "Twitch Extensions"
           ]
         }
       ]
     };
-    // this.onInterestClick = this.onInterestClick.bind(this);
   }
 
   onMenuButtonClick(filter: Filter) {
@@ -420,7 +552,10 @@ export class App extends Component<{}, State> {
       otherSkills,
       techs,
       socialMedia,
-      experience
+      experience,
+      frontendStack,
+      backendStack,
+      gamedevStack
     } = this.state;
 
     const expFiltered = experience.filter(
@@ -453,12 +588,16 @@ export class App extends Component<{}, State> {
           <PhotoContainer>
             <Photo src={photo} {...rest} />
           </PhotoContainer>
+
           <MainInfoWrapper>
-            <FullName>Penkov Pavel (20 years)</FullName>
+            <FullName>Penkov Pavel (21 years)</FullName>
+
             <ShortDescription>
               Developer, Designer, Enterpreneur
             </ShortDescription>
+
             <Nickname>@CiberusPS</Nickname>
+
             <Location>
               <MapMarker
                 className={"fas fa-map-marker-alt"}
@@ -481,6 +620,7 @@ export class App extends Component<{}, State> {
             </SocialIconRow>
           </MainInfoWrapper>
         </Header>
+
         <MainSection>
           <SkillsContainer>
             <SkillsHeader>Techs</SkillsHeader>
@@ -491,12 +631,43 @@ export class App extends Component<{}, State> {
               })}
             </SkillsContent>
 
+            <SkillsHeader>Stack</SkillsHeader>
+            <InterestsContent>
+              <SkillHeader>Front-end:</SkillHeader>
+              <PinRow>
+                {frontendStack.map(val => {
+                  return <Pin key={val}>{val}</Pin>;
+                })}
+              </PinRow>
+
+              <SkillHeader>Back-end:</SkillHeader>
+              <PinRow>
+                {backendStack.map(val => {
+                  return <Pin key={val}>{val}</Pin>;
+                })}
+              </PinRow>
+
+              <SkillHeader>GameDev:</SkillHeader>
+              <PinRow>
+                {gamedevStack.map(val => {
+                  return <Pin key={val}>{val}</Pin>;
+                })}
+              </PinRow>
+            </InterestsContent>
+
             <SkillsHeader>Interests</SkillsHeader>
             <InterestsContent>
               {interests.map(val => {
                 return <Pin key={val}>{val}</Pin>;
               })}
             </InterestsContent>
+
+            {/* <SkillsHeader>Favourite techs</SkillsHeader>
+            <InterestsContent>
+              {frontendStack.map(val => {
+                return <Pin key={val}>{val}</Pin>;
+              })}
+            </InterestsContent> */}
 
             <SkillsHeader>Skills</SkillsHeader>
             <SkillsContent>
@@ -612,10 +783,10 @@ injectGlobal`
     font-style: normal;
     font-stretch: normal;
     letter-spacing: 1.5px;
-  }
-
-  @media only screen and (max-device-width: 480px) {
-    html { font-size: 75%; // 16px }
+    
+    @media (max-width: ${breakpoint.sm}) {
+      /* font-size: 90%; */
+    }
   }
 
   #root {
@@ -624,6 +795,7 @@ injectGlobal`
   }
 
   body {
+    font-size: inherit;
     margin: 0;
     padding: 0;
     background: ${BACKGROUND_COLOR};
@@ -633,7 +805,7 @@ injectGlobal`
   body * {
     /* display: flex;
     flex-wrap: wrap; */
-    transition: all 0.1s ease;
+    /* transition: all 0.1s ease; */
     /* flex: 1; */
   }
 
@@ -667,8 +839,11 @@ export const AppContainer = styled(FDiv)`
 `;
 
 export const Header = styled(FDiv)`
+  flex-wrap: wrap;
   flex: 1;
-  margin-top: 2.5em;
+
+  margin-top: 2.5rem;
+  padding: 0 20px;
 `;
 
 export const Photo = styled.img`
@@ -689,18 +864,22 @@ export const PhotoContainer = styled(FDiv)`
   margin-top: 10px;
   flex: 1;
 
-  @media (max-width: 480px) {
+  @media (max-width: ${breakpoint.sm}) {
     justify-content: center;
+    margin-bottom: 20px;
   }
 `;
 
 export const MainInfoWrapper = styled(FDiv)`
   flex-direction: column;
   justify-items: center;
+  flex: 1;
+  flex-basis: 290px;
+
   padding: 0 20px;
+
   font-size: 1.2em;
   line-height: 1.5em;
-  flex: 2;
 `;
 
 export const ShortDescription = styled(FDiv)`
@@ -751,6 +930,8 @@ export const MainSection = styled(FDiv)`
 export const SkillsContainer = styled(FDiv)`
   flex-direction: column;
   flex: 1;
+
+  min-width: 300px;
 `;
 
 export const SkillsHeader = styled(FDiv)`
@@ -776,6 +957,7 @@ export const SkillsContent = styled(FDiv)`
 export const InterestsContent = styled(FDiv)`
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   padding: 1em;
 `;
 
@@ -796,6 +978,8 @@ export const Menu = styled(FDiv)`
   height: 60px;
   width: 100%;
   font-size: 0.9em;
+
+  /* flex-wrap: wrap; */
 `;
 
 export interface MenuButtonProps {
@@ -826,10 +1010,16 @@ export const MenuButton = styled.button`
   }
 `;
 
-export const SkillHeader = styled(FDiv)``;
+export const SkillHeader = styled(FDiv)`
+  flex: 100%;
+`;
 
 export const PinRow = styled(FDiv)`
   margin-bottom: 1.5em;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 `;
 
 export const CarouselItem = styled(FDiv)`

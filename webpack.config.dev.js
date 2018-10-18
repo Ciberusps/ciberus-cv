@@ -14,7 +14,7 @@ const NODE_ENV = process.env.NODE_ENV;
 
 const PUBLIC_PATH = "/";
 
-const APP_TITLE = "CiberusPS CV";
+const APP_TITLE = "Ciberus CV";
 
 const PROTOCOL = "http";
 const HOST = "0.0.0.0";

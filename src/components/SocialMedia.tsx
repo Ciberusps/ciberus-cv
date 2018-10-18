@@ -82,9 +82,9 @@ export class SocialMedia extends Component<ISocialMedia, {}> {
 export const SocialIconLink = styled.a`
   display: flex;
   flex-wrap: wrap;
-  width: 44px;
-  height: 44px;
-  margin: 0 10px 6px 0;
+  width: 40px;
+  height: 40px;
+  margin: 0 8px 6px 0;
   background: linear-gradient(-45deg, ${MAIN_COLOR}, ${ADDITIONAL_COLOR});
   border-radius: 20px;
   transition: all 0.2s ease;
@@ -97,6 +97,6 @@ export const SocialIconLink = styled.a`
 `;
 
 export const SocialIconImage = styled.img`
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
 `;
