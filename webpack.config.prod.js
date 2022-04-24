@@ -172,7 +172,6 @@ module.exports = {
     new ExtractTextWebpackPlugin({
       filename: "css/[name].[contenthash:8].css"
     }),
-    new BabelMinifyWebpackPlugin(),
     new OfflineWebpackPlugin()
   ]
 };
